@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Eyebrow } from "@/components/ui";
 import { BRAND_NAME } from "@/lib/constants";
 
@@ -45,12 +46,28 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <header className="border-b border-border bg-surface">
         <div className="mx-auto flex max-w-container items-center justify-between px-6 py-4 sm:px-10">
           <span className="font-display text-lg tracking-tight">{BRAND_NAME} — Admin</span>
-          <nav className="flex items-center gap-6 font-sans text-sm uppercase tracking-wide text-ink-muted">
-            <Eyebrow className="text-ink-muted">Overview</Eyebrow>
-            <Eyebrow className="text-ink-muted">Dishes</Eyebrow>
-            <Eyebrow className="text-ink-muted">Integrity</Eyebrow>
-            <Eyebrow className="text-ink-muted">Export</Eyebrow>
-            <Eyebrow className="text-ink-muted">Settings</Eyebrow>
+          <nav
+            aria-label="Admin sections"
+            className="flex items-center gap-6 font-sans text-sm uppercase tracking-wide text-ink-muted"
+          >
+            <Link
+              href="/admin"
+              className="ws-eyebrow text-ink-muted transition-colors duration-200 ease-calm hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus focus-visible:outline-offset-2 rounded-sm"
+            >
+              Overview
+            </Link>
+            <Link
+              href="/admin/dishes"
+              className="ws-eyebrow text-ink-muted transition-colors duration-200 ease-calm hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus focus-visible:outline-offset-2 rounded-sm"
+            >
+              Dishes
+            </Link>
+            {/* Integrity / Export / Settings: out of scope for this build
+                (PLAN §4.1 routes not yet implemented) — left as inert
+                labels rather than dead links. */}
+            <Eyebrow className="text-ink-subtle opacity-60">Integrity</Eyebrow>
+            <Eyebrow className="text-ink-subtle opacity-60">Export</Eyebrow>
+            <Eyebrow className="text-ink-subtle opacity-60">Settings</Eyebrow>
           </nav>
         </div>
       </header>
