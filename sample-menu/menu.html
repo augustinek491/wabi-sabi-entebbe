@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" class="ws-base">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wabi-Sabi Entebbe — Sample Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../design-system/tokens.css" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: var(--leading-normal);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-5); }
+
+  /* ---- Disclaimer banner ---- */
+  .disclaimer {
+    background: color-mix(in srgb, var(--ws-brass-300) 22%, var(--color-surface));
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-4) 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    text-align: center;
+    line-height: var(--leading-relaxed);
+  }
+  .disclaimer strong {
+    color: var(--color-ink);
+    font-weight: var(--weight-semibold);
+  }
+  .disclaimer .wrap { max-width: var(--measure); padding: 0 var(--space-5); }
+
+  /* ---- Header / hero ---- */
+  header.masthead {
+    text-align: center;
+    padding-block: var(--space-9) var(--space-7);
+    background-image: var(--seigaiha);
+    background-size: var(--seigaiha-size);
+  }
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+  }
+  .wordmark {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    font-size: var(--text-4xl);
+    color: var(--color-ink);
+    margin: 0;
+  }
+  .wordmark .dot { color: var(--color-primary); padding-inline: 0.25em; }
+  .tagline {
+    margin: var(--space-4) auto 0;
+    max-width: var(--measure);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-xl);
+    color: var(--color-ink-muted);
+    font-weight: var(--weight-light);
+  }
+
+  /* ---- Menu layout ---- */
+  main.menu {
+    padding-block: var(--space-8);
+  }
+  .category {
+    padding-block: var(--space-7);
+  }
+  .category:first-of-type { padding-top: 0; }
+
+  .category-heading {
+    font-family: var(--font-display);
+    font-weight: var(--weight-regular);
+    font-size: var(--text-3xl);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink);
+    margin: 0 0 var(--space-2);
+    text-align: center;
+  }
+  .category-subheading {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--color-ink-subtle);
+    margin: 0 0 var(--space-6);
+  }
+
+  .items {
+    max-width: var(--measure);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .item-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
+  .item-name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
+  .item-leader {
+    flex: 1 1 40px;
+    border-bottom: 1px dotted var(--color-border-strong);
+    height: 0.6em;
+    min-width: 24px;
+    margin: 0 var(--space-1);
+  }
+  .item-price {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+    white-space: nowrap;
+    letter-spacing: var(--tracking-wide);
+  }
+  .item-desc {
+    flex-basis: 100%;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    margin: 0;
+    line-height: var(--leading-normal);
+  }
+  .item-note {
+    flex-basis: 100%;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-subtle);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ---- Kintsugi seam divider ---- */
+  hr.kintsugi {
+    height: 2px;
+    border: 0;
+    background: var(--kintsugi-seam);
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* ---- Footer ---- */
+  footer.colophon {
+    border-top: var(--border-hairline);
+    padding-block: var(--space-7);
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-subtle);
+    line-height: var(--leading-relaxed);
+  }
+  footer.colophon .footer-mark {
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-3);
+    display: block;
+  }
+  footer.colophon p { max-width: var(--measure); margin: var(--space-2) auto 0; }
+
+  @media (max-width: 600px) {
+    .wordmark { font-size: var(--text-3xl); letter-spacing: var(--tracking-wider); }
+    .category-heading { font-size: var(--text-2xl); }
+    .item-name { font-size: var(--text-base); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="disclaimer">
+    <div class="wrap">
+      ⚠️ <strong>Sample Menu — placeholder content.</strong> The dishes, descriptions and prices
+      shown here are transcribed from the Izumi Restaurant &amp; Lounge menu and are used only
+      as placeholder data for Wabi-Sabi Entebbe website mockups. They are <strong>not</strong>
+      Wabi-Sabi Entebbe's real menu. Prices shown as printed (believed to be UGX).
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="eyebrow">Sample Menu &middot; Placeholder Data</div>
+      <h1 class="wordmark">WABI<span class="dot">&middot;</span>SABI</h1>
+      <p class="tagline">A quiet table by the lake. Sushi at the bar. Time, slowed.</p>
+    </div>
+  </header>
+
+  <main class="menu wrap">
+
+    <!-- MAINS -->
+    <section class="category">
+      <h2 class="category-heading">Mains</h2>
+      <p class="category-subheading">Curries &middot; Stir-fries &middot; Fish</p>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Dry Curry Prawns</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Lemon Prawns</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Singapore Chili Prawn Curry</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Steam Prawns with Garlic Sauce</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Thai Spicy Prawns</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Tamarind Prawns</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Thai Red Curry</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Thai Green Curry</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Thai Panang Curry</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Thai Massaman Curry</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Spicy Minced Chicken/Pork</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Chicken/Pork with Black Mushrooms</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Cashewnut</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Shredded Chicken with Pickled Chili</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Ginger Chicken</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Pineapple Chicken/Pork</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Crispy Thai Fried Chicken</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Japanese Curry</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Japanese Karaage</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Teriyaki</span><span class="item-leader"></span><span class="item-price">45,000- / 45,000-</span><p class="item-desc">Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Shogayaki</span><span class="item-leader"></span><span class="item-price">45,000- / 45,000-</span><p class="item-desc">Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Crispy Ginger Honey Beef</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Asian Style Mushroom</span><span class="item-leader"></span><span class="item-price">45,000- / 45,000-</span><p class="item-desc">Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Chilli Tofu with Eggplant</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Stir Fry Green Broccoli</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Thai Spicy Eggplant</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Three Flavor Fish</span><span class="item-leader"></span><span class="item-price">85,000-</span></div>
+        <div class="item-row"><span class="item-name">Steam Fish with Broccoli</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Steam Fish with Soy Sauce</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Sichuan Fried Fish</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Crispy Fried Fish with Tamarind Fish</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Grilled Snapper with Ponzu Sauce</span><span class="item-leader"></span><span class="item-price">85,000-</span><p class="item-note">Estimated placeholder — original obscured on source scan.</p></div>
+        <div class="item-row"><span class="item-name">Spicy Fried Hamour Fish</span><span class="item-leader"></span><span class="item-price">80,000-</span><p class="item-note">Estimated placeholder — original obscured on source scan.</p></div>
+        <div class="item-row"><span class="item-name">Stir Fried Basil</span><span class="item-leader"></span><span class="item-price">40,000- / 45,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Beef &middot; Pork &nbsp;(Crispy Fish — 75,000-)</p></div>
+        <div class="item-row"><span class="item-name">Shredded Fish in Pickled Chilli</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Chili Garlic Veggies with Cashewnut</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Green Beans with Cashewnuts</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Stir Fry Lemon Eggplant</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Garlic Sprouts</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- JAPANESE STEAKS -->
+    <section class="category">
+      <h2 class="category-heading">Japanese Steaks</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Wasabi Pepper</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Red Chili, Sesame &amp; Sweet Soy</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Lemongrass</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- RICE & NOODLES -->
+    <section class="category">
+      <h2 class="category-heading">Rice &amp; Noodles</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Pad Thai Noodles</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Shrimp</p></div>
+        <div class="item-row"><span class="item-name">Udon Noodles</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Shrimp</p></div>
+        <div class="item-row"><span class="item-name">Soba Noodles</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Shrimp</p></div>
+        <div class="item-row"><span class="item-name">Garlic Glass Noodles</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Fried Noodles</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Thai Sukiyaki Noodles</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Steamed Rice</span><span class="item-leader"></span><span class="item-price">10,000-</span></div>
+        <div class="item-row"><span class="item-name">Sticky Rice</span><span class="item-leader"></span><span class="item-price">10,000-</span></div>
+        <div class="item-row"><span class="item-name">Fried Rice</span><span class="item-leader"></span><span class="item-price">30,000- / 35,000- / 35,000- / 35,000- / 40,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Egg &middot; Pork &middot; Shrimp</p></div>
+        <div class="item-row"><span class="item-name">Burnt Garlic Fried Rice</span><span class="item-leader"></span><span class="item-price">30,000- / 35,000- / 35,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Sesame Fried Rice</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+        <div class="item-row"><span class="item-name">Mushroom Fried Rice</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+        <div class="item-row"><span class="item-name">Pineapple Fried Rice</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Nasi Goreng</span><span class="item-leader"></span><span class="item-price">35,000- / 40,000- / 45,000- / 45,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Green Curry Rice</span><span class="item-leader"></span><span class="item-price">30,000- / 35,000-</span><p class="item-desc">Veg &middot; Chicken</p></div>
+        <div class="item-row"><span class="item-name">Guydon</span><span class="item-leader"></span><span class="item-price">45,000-</span><p class="item-desc">Donburi — Karaa-Don</p></div>
+        <div class="item-row"><span class="item-name">Oyakodon</span><span class="item-leader"></span><span class="item-price">45,000-</span><p class="item-desc">Donburi</p></div>
+        <div class="item-row"><span class="item-name">Ten Don</span><span class="item-leader"></span><span class="item-price">60,000-</span><p class="item-desc">Donburi — Prawn</p></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- APPETIZERS -->
+    <section class="category">
+      <h2 class="category-heading">Appetizers</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Thai Spring Rolls</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Fresh Spring Rolls</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Edamame</span><span class="item-leader"></span><span class="item-price">35,000- / 35,000- / 50,000-</span><p class="item-desc">Spicy &middot; Garlic &middot; Truffle</p></div>
+        <div class="item-row"><span class="item-name">Cashewnut</span><span class="item-leader"></span><span class="item-price">35,000- / 35,000-</span><p class="item-desc">Tempura &middot; Chilli</p></div>
+        <div class="item-row"><span class="item-name">Prawn Crackers</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+        <div class="item-row"><span class="item-name">Wasabi/Dynamite Prawns</span><span class="item-leader"></span><span class="item-price">55,000-</span></div>
+        <div class="item-row"><span class="item-name">Crispy Prawns Tempura</span><span class="item-leader"></span><span class="item-price">70,000-</span></div>
+        <div class="item-row"><span class="item-name">Furai Breadcrumb Prawns</span><span class="item-leader"></span><span class="item-price">70,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Thai Fish</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Fish Tempura</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Ginger Chicken Wings</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Chanui Chicken with Pancake</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Honey Sesame Spare Ribs</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Chilly Garlic Spare Ribs</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Wantons</span><span class="item-leader"></span><span class="item-price">30,000- / 35,000-</span><p class="item-desc">Veg &middot; Chicken</p></div>
+        <div class="item-row"><span class="item-name">Veg Tempura</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Rock Corn Tempura</span><span class="item-leader"></span><span class="item-price">28,000-</span></div>
+        <div class="item-row"><span class="item-name">Natu Miso Aubergine</span><span class="item-leader"></span><span class="item-price">28,000-</span></div>
+        <div class="item-row"><span class="item-name">Crispy Corn with Cashewnuts</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Salt &amp; Pepper</span><span class="item-leader"></span><span class="item-price">30,000- / 30,000-</span><p class="item-desc">Brocoli &middot; Tofu</p></div>
+        <div class="item-row"><span class="item-name">Agadashi Tofu</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Okonomiyaki Pancake</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Mock Duck with Pancakes</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Crispy Hot Thai Chicken</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+        <div class="item-row"><span class="item-name">Honey Sesame Lotus Root</span><span class="item-leader"></span><span class="item-price">45,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- SALADS -->
+    <section class="category">
+      <h2 class="category-heading">Salads</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Som Tum Papaya Salad</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Laab</span><span class="item-leader"></span><span class="item-price">40,000- / 40,000-</span><p class="item-desc">Chicken &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Wakame (Japanese Seaweed Salad)</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Nam Tok</span><span class="item-leader"></span><span class="item-price">40,000- / 40,000-</span><p class="item-desc">Beef &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Grilled Beef Salad</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Glass Noodle Salad</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Veg Salad</span><span class="item-leader"></span><span class="item-price">28,000- / 35,000-</span><p class="item-desc">+ Chicken or Beef</p></div>
+        <div class="item-row"><span class="item-name">Thai Mango Salad</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- SOUPS -->
+    <section class="category">
+      <h2 class="category-heading">Soups</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Tom Yum</span><span class="item-leader"></span><span class="item-price">30,000- / 50,000-</span><p class="item-desc">Veg &middot; Shrimp</p></div>
+        <div class="item-row"><span class="item-name">Tom Kha</span><span class="item-leader"></span><span class="item-price">30,000- / 40,000-</span><p class="item-desc">Veg &middot; Chicken</p></div>
+        <div class="item-row"><span class="item-name">Dumpling Soup</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Ramen Noodle Soup Miso</span><span class="item-leader"></span><span class="item-price">40,000- / 50,000- / 65,000-</span><p class="item-desc">Veg &middot; Chicken &middot; Seafood</p></div>
+        <div class="item-row"><span class="item-name">Spicy Ramen Soup</span><span class="item-leader"></span><span class="item-price">40,000- / 50,000-</span><p class="item-desc">Veg &middot; Pork</p></div>
+        <div class="item-row"><span class="item-name">Japanese Noodles Soup</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Soba Noodle Soup</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Sweet Corn Soup</span><span class="item-leader"></span><span class="item-price">25,000- / 35,000-</span><p class="item-desc">Chicken &middot; Crab</p></div>
+        <div class="item-row"><span class="item-name">Hot &amp; Sour Soup</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Veg Soup</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- GRILLS -->
+    <section class="category">
+      <h2 class="category-heading">Grills</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Thai Roasted Chicken</span><span class="item-leader"></span><span class="item-price">85,000-</span></div>
+        <div class="item-row"><span class="item-name">Chicken Yakitori</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Satay</span><span class="item-leader"></span><span class="item-price">30,000- / 30,000- / 30,000-</span><p class="item-desc">Chicken &middot; Pork &middot; Beef</p></div>
+        <div class="item-row"><span class="item-name">Thai Grilled</span><span class="item-leader"></span><span class="item-price">45,000- / 65,000-</span><p class="item-desc">Pork &middot; Prawns</p></div>
+        <div class="item-row"><span class="item-name">Seafood Platter</span><span class="item-leader"></span><span class="item-price">130,000-</span><p class="item-desc">Tuna, Salmon, Prawn</p></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- DESSERT -->
+    <section class="category">
+      <h2 class="category-heading">Dessert</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Classic Chocolate Fudge Cake</span><span class="item-leader"></span><span class="item-price">28,000-</span><p class="item-desc">Served with a scoop of vanilla ice cream</p></div>
+        <div class="item-row"><span class="item-name">Dark Chocolate Mousse</span><span class="item-leader"></span><span class="item-price">26,000-</span><p class="item-desc">Not just any mousse — a must for chocolate lovers</p></div>
+        <div class="item-row"><span class="item-name">Fresh Fruits Platter</span><span class="item-leader"></span><span class="item-price">32,000-</span></div>
+        <div class="item-row"><span class="item-name">Coconut Milk Cake</span><span class="item-leader"></span><span class="item-price">28,000-</span><p class="item-desc">A must for coconut lovers</p></div>
+        <div class="item-row"><span class="item-name">Fresh Mango with Sticky Rice and Coconut Custard</span><span class="item-leader"></span><span class="item-price">28,000-</span><p class="item-desc">Popular Thai dessert</p></div>
+        <div class="item-row"><span class="item-name">Ice Cream</span><span class="item-leader"></span><span class="item-price">10,000-</span><p class="item-desc">Vanilla &middot; Chocolate &middot; Strawberry</p><p class="item-note">A second figure on the source scan is illegible.</p></div>
+        <div class="item-row"><span class="item-name">Home Made Ice Cream</span><span class="item-leader"></span><span class="item-price">15,000-</span><p class="item-desc">Jasmine Tea &middot; Sesame &middot; Mango Lime &middot; Coconut</p><p class="item-note">A second figure on the source scan is illegible.</p></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- DIM SUM -->
+    <section class="category">
+      <h2 class="category-heading">Dim Sum</h2>
+      <p class="category-subheading">Vegetarian</p>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Ginger Spinach and Mushroom</span><span class="item-leader"></span><span class="item-price">28,000-</span></div>
+        <div class="item-row"><span class="item-name">Steamed Garlic Greens</span><span class="item-leader"></span><span class="item-price">28,000-</span></div>
+        <div class="item-row"><span class="item-name">Edamame, Truffle and Tofu</span><span class="item-leader"></span><span class="item-price">28,000-</span></div>
+        <div class="item-row"><span class="item-name">Brocolli &amp; Cashewnut</span><span class="item-leader"></span><span class="item-price">28,000-</span></div>
+        <div class="item-row"><span class="item-name">Vegetable Bao</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Veg Gyoza</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Panfried Ricepaper Dumpling</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Szechuan Dumpling</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+      </div>
+
+      <p class="category-subheading" style="margin-top: var(--space-6)">Non-Vegetarian</p>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Prawn, Chive &amp; Garlic</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Thai Lemongrass Shrimp</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Steamed Pork Dimsum</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Lemon Chicken</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Rice Pepper Chicken Dumpling</span><span class="item-leader"></span><span class="item-price">38,000-</span></div>
+        <div class="item-row"><span class="item-name">BAO — Pork/Chicken</span><span class="item-leader"></span><span class="item-price">42,000-</span></div>
+        <div class="item-row"><span class="item-name">GYOZA — Chicken / Pork</span><span class="item-leader"></span><span class="item-price">38,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Szechuan Dumpling Chicken</span><span class="item-leader"></span><span class="item-price">39,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- SUSHI -->
+    <section class="category">
+      <h2 class="category-heading">Sushi</h2>
+      <p class="category-subheading">Vegetarian &middot; 8 pcs</p>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Vegetable Tempura</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Mushroom Teriyaki</span><span class="item-leader"></span><span class="item-price">34,000-</span></div>
+        <div class="item-row"><span class="item-name">Cucumber / Avocado / Maki</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Black Bean Brocolli</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Crackled Spinach &amp; Tofu</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Mango</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Jalapeno Pepper</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Avocado Wakame</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Tofu Roll</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Fresh Green Maki</span><span class="item-leader"></span><span class="item-price">36,000-</span></div>
+        <div class="item-row"><span class="item-name">Thai Spicy Veg Sushi</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Tamago Egg</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+        <div class="item-row"><span class="item-name">Crispy Brocolli Maki</span><span class="item-leader"></span><span class="item-price">35,000-</span></div>
+      </div>
+
+      <p class="category-subheading" style="margin-top: var(--space-6)">Non-Veg &middot; 8 pcs</p>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Tuna / Spicy</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Salmon Avocado</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">California</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Yellow Fin Tuna &amp; Jalapeno</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Prawn Tempura Roll</span><span class="item-leader"></span><span class="item-price">50,000-</span></div>
+        <div class="item-row"><span class="item-name">Tuna &amp; Truffle</span><span class="item-leader"></span><span class="item-price">50,000-</span><p class="item-desc">Tuna &middot; Salmon</p></div>
+        <div class="item-row"><span class="item-name">Maki</span><span class="item-leader"></span><span class="item-price">50,000-</span><p class="item-desc">Tuna &middot; Salmon</p></div>
+        <div class="item-row"><span class="item-name">Mango &amp; Prawn</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Dragon</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Classic Onigiri Roll</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Dynamite</span><span class="item-leader"></span><span class="item-price">50,000-</span><p class="item-desc">Tuna &middot; Prawn</p></div>
+        <div class="item-row"><span class="item-name">Chicken Crispy Maki Sushi</span><span class="item-leader"></span><span class="item-price">48,000-</span></div>
+        <div class="item-row"><span class="item-name">Thai Spicy Chicken Sushi</span><span class="item-leader"></span><span class="item-price">48,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Burnt Salmon Roll</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Burnt Tuna / Spicy</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Spicy Thai Prawns</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Burnt Snapper Maki</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+        <div class="item-row"><span class="item-name">Prawn Popper Maki</span><span class="item-leader"></span><span class="item-price">60,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- SASHIMI -->
+    <section class="category">
+      <h2 class="category-heading">Sashimi</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Tuna Tataki</span><span class="item-leader"></span><span class="item-price">65,000-</span></div>
+        <div class="item-row"><span class="item-name">Snapper Sashimi</span><span class="item-leader"></span><span class="item-price">65,000-</span></div>
+        <div class="item-row"><span class="item-name">Fresh Salmon Sashimi</span><span class="item-leader"></span><span class="item-price">85,000-</span></div>
+        <div class="item-row"><span class="item-name">Fresh Salmon Thai Sashimi</span><span class="item-leader"></span><span class="item-price">95,000-</span></div>
+        <div class="item-row"><span class="item-name">Sashimi Platter</span><span class="item-leader"></span><span class="item-price">70,000- / 100,000- / 130,000-</span><p class="item-desc">Small &middot; Medium &middot; Large</p></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- NIGIRI -->
+    <section class="category">
+      <h2 class="category-heading">Nigiri</h2>
+      <p class="category-subheading">2 pcs</p>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Snapper</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+        <div class="item-row"><span class="item-name">Tamago</span><span class="item-leader"></span><span class="item-price">20,000-</span></div>
+        <div class="item-row"><span class="item-name">Salmon</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Tuna</span><span class="item-leader"></span><span class="item-price">30,000-</span></div>
+        <div class="item-row"><span class="item-name">Prawn</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+        <div class="item-row"><span class="item-name">Squid</span><span class="item-leader"></span><span class="item-price">25,000-</span></div>
+        <div class="item-row"><span class="item-name">Ikura Salmon Egg</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Tobiko</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Nigiri Platter</span><span class="item-leader"></span><span class="item-price">60,000- / 79,000- / 100,000-</span><p class="item-desc">Small &middot; Medium &middot; Large</p></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- POKE BOWLS -->
+    <section class="category">
+      <h2 class="category-heading">Poke Bowls</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Salmon</span><span class="item-leader"></span><span class="item-price">90,000-</span></div>
+        <div class="item-row"><span class="item-name">Tuna</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+        <div class="item-row"><span class="item-name">Mixed Fish</span><span class="item-leader"></span><span class="item-price">85,000-</span></div>
+      </div>
+    </section>
+
+    <hr class="kintsugi" />
+
+    <!-- JAPANESE SALAD -->
+    <section class="category">
+      <h2 class="category-heading">Japanese Salad</h2>
+      <div class="items">
+        <div class="item-row"><span class="item-name">Wakame</span><span class="item-leader"></span><span class="item-price">40,000-</span></div>
+        <div class="item-row"><span class="item-name">Tuna</span><span class="item-leader"></span><span class="item-price">55,000-</span></div>
+        <div class="item-row"><span class="item-name">Salmon</span><span class="item-leader"></span><span class="item-price">65,000-</span></div>
+        <div class="item-row"><span class="item-name">Sea Food</span><span class="item-leader"></span><span class="item-price">75,000-</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="colophon wrap">
+    <span class="footer-mark">Wabi&middot;Sabi Entebbe</span>
+    <p>
+      <strong>Sample menu — placeholder only.</strong> All dishes, descriptions and prices are
+      transcribed from the Izumi Restaurant &amp; Lounge menu (4-page scan) and used solely as
+      sample data for design mockups. This is not Wabi-Sabi Entebbe's real menu and should be
+      replaced with actual content before any public use. Prices shown as printed on the source
+      (believed to be UGX — Ugandan Shillings).
+    </p>
+    <p>Last updated: 2026-06-15</p>
+  </footer>
+
+</body>
+</html>

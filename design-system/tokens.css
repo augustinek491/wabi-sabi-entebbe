@@ -1,0 +1,179 @@
+/* =====================================================================
+   WABI-SABI ENTEBBE — DESIGN TOKENS
+   Single source of truth. Colours anchored to values sampled from the
+   logo (assets/brand-hero.jpeg); extended tones are wabi-sabi material
+   colours, labelled below. v1.0 · 2026-06-15
+   Fonts (inferred, free stand-ins): Cormorant Garamond + Jost.
+   @import in your app, or use design-system/tokens.json / tailwind.config.js.
+   ===================================================================== */
+
+/* Optional — load the stand-in fonts:
+   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap'); */
+
+:root {
+  /* ---- PALETTE PRIMITIVES ------------------------------------------ */
+  /* Washi paper / ivory (sampled #F0F0E0 ≈ 58% of logo) */
+  --ws-washi-50:  #FAF8F0;
+  --ws-washi-100: #F3EFE1;   /* primary background */
+  --ws-washi-200: #E9E3D0;   /* sunken / cream surface */
+
+  /* Warm stone / taupe neutrals (sampled #D0C0A0 / #C0C0B0) */
+  --ws-stone-300: #D6CCB6;
+  --ws-stone-400: #C9BFA6;   /* borders */
+  --ws-stone-500: #A89E86;
+  --ws-stone-600: #7C7666;
+
+  /* Antique brass / gold — the ensō (sampled #906010 → #C09040) */
+  --ws-brass-300: #D8B978;   /* champagne highlight */
+  --ws-brass-400: #C9A14E;
+  --ws-brass-500: #B98A3C;   /* PRIMARY ACCENT */
+  --ws-brass-600: #A1762C;
+  --ws-brass-700: #8A5E14;   /* deep brass (sampled) */
+
+  /* Sumi ink (sampled #000–#101010) */
+  --ws-sumi-700: #3A352B;    /* soft ink-brown */
+  --ws-sumi-800: #2B2823;    /* charcoal */
+  --ws-sumi-900: #16150F;    /* near-black */
+
+  /* Extended wabi-sabi material tones (designed extension — earthen) */
+  --ws-clay-500:   #B07A56;  /* terracotta */
+  --ws-matcha-500: #7C8366;  /* muted sage / matcha */
+  --ws-shoyu-700:  #3A2A1E;  /* deep soy / wood brown */
+
+  /* ---- SEMANTIC (light · "Washi Day") ------------------------------ */
+  --color-bg:              var(--ws-washi-100);
+  --color-surface:         var(--ws-washi-50);
+  --color-surface-sunken:  var(--ws-washi-200);
+  --color-ink:             var(--ws-sumi-900);
+  --color-ink-muted:       var(--ws-sumi-700);
+  --color-ink-subtle:      var(--ws-stone-600);
+  --color-primary:         var(--ws-brass-500);
+  --color-primary-hover:   var(--ws-brass-600);
+  --color-on-primary:      var(--ws-sumi-900);   /* dark ink on gold = legible */
+  --color-border:          var(--ws-stone-400);
+  --color-border-strong:   var(--ws-stone-500);
+  --color-accent-clay:     var(--ws-clay-500);
+  --color-accent-matcha:   var(--ws-matcha-500);
+  --color-focus:           var(--ws-brass-600);
+
+  /* ---- TYPOGRAPHY -------------------------------------------------- */
+  --font-display: "Cormorant Garamond", "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-sans:    "Jost", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.25rem;
+  --text-xl:   1.563rem;
+  --text-2xl:  1.953rem;
+  --text-3xl:  2.441rem;
+  --text-4xl:  3.052rem;
+  --text-5xl:  3.815rem;
+  --text-6xl:  4.768rem;
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.85;
+
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.18em;
+  --tracking-widest:  0.32em;   /* wordmark / eyebrow caps */
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* ---- SPACING (4px base) ----------------------------------------- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;  --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.5rem;  --space-6: 2rem;
+  --space-7: 3rem;     --space-8: 4rem;    --space-9: 6rem;
+  --space-10: 8rem;    --space-11: 12rem;
+  --section-y: clamp(4rem, 10vw, 9rem);   /* generous "ma" rhythm */
+
+  /* ---- RADII ------------------------------------------------------- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+  /* imperfect, hand-thrown ceramic edge — use on feature cards/images */
+  --radius-organic: 62% 38% 54% 46% / 52% 56% 44% 48%;
+
+  /* ---- BORDERS / LINES -------------------------------------------- */
+  --border-hairline: 1px solid var(--color-border);
+  --border-ink:      1.5px solid var(--ws-sumi-900);
+
+  /* ---- SHADOWS (soft, warm-tinted — never harsh) ------------------ */
+  --shadow-sm: 0 1px 2px rgba(22, 21, 15, 0.06);
+  --shadow-md: 0 6px 20px -8px rgba(22, 21, 15, 0.14);
+  --shadow-lg: 0 18px 50px -20px rgba(22, 21, 15, 0.22);
+
+  /* ---- MOTION (calm, mindful) ------------------------------------- */
+  --ease-calm: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 200ms;
+  --dur-base: 400ms;
+  --dur-slow: 700ms;
+
+  /* ---- LAYOUT ------------------------------------------------------ */
+  --container: 1180px;
+  --measure: 68ch;     /* ideal reading width */
+
+  /* ---- SIGNATURE GRADIENTS / MOTIFS ------------------------------- */
+  --gradient-brass: linear-gradient(135deg, var(--ws-brass-700) 0%, var(--ws-brass-400) 45%, var(--ws-brass-300) 100%);
+  --kintsugi-seam:  linear-gradient(90deg, transparent, var(--ws-brass-500) 18%, var(--ws-brass-300) 50%, var(--ws-brass-500) 82%, transparent);
+  /* faint seigaiha (ripple) wash for section backgrounds */
+  --seigaiha: radial-gradient(circle at 50% 100%, transparent 9px, rgba(168,158,134,0.16) 10px 11px, transparent 12px);
+  --seigaiha-size: 30px 30px;
+}
+
+/* =====================================================================
+   OPTIONAL DARK THEME — "Sumi Night"
+   Apply with <html data-theme="night"> or .theme-night
+   ===================================================================== */
+[data-theme="night"], .theme-night {
+  --color-bg:             var(--ws-sumi-900);
+  --color-surface:        var(--ws-sumi-800);
+  --color-surface-sunken: #100F0A;
+  --color-ink:            var(--ws-washi-100);
+  --color-ink-muted:      var(--ws-stone-400);
+  --color-ink-subtle:     var(--ws-stone-500);
+  --color-primary:        var(--ws-brass-400);   /* brighter gold on dark */
+  --color-primary-hover:  var(--ws-brass-300);
+  --color-on-primary:     var(--ws-sumi-900);
+  --color-border:         #3A352B;
+  --color-border-strong:  var(--ws-stone-600);
+  --shadow-md: 0 6px 24px -8px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+}
+
+/* =====================================================================
+   MINIMAL BASE LAYER (optional — remove if you have your own reset)
+   ===================================================================== */
+.ws-base {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.ws-base h1, .ws-base h2, .ws-base h3, .ws-base .display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+}
+.ws-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-primary);
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="ws-base">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wabi-Sabi Entebbe — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--color-bg); color: var(--color-ink); transition: background var(--dur-base) var(--ease-calm), color var(--dur-base) var(--ease-calm); }
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-5); }
+  section { padding-block: var(--section-y); border-top: 1px solid var(--color-border); }
+  section:first-of-type { border-top: 0; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: var(--leading-tight); margin: 0; }
+  p { max-width: var(--measure); color: var(--color-ink-muted); }
+  a { color: var(--color-primary-hover); }
+
+  /* top bar */
+  .topbar { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-4); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; background: color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter: blur(8px); z-index: 10; }
+  .mark { font-family: var(--font-sans); font-weight: 500; text-transform: uppercase; letter-spacing: var(--tracking-widest); font-size: var(--text-sm); }
+  .mark b { color: var(--color-primary); font-weight: 600; }
+  .toggle { font: inherit; font-family: var(--font-sans); font-size: var(--text-sm); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--color-ink); background: transparent; border: 1px solid var(--color-border-strong); border-radius: var(--radius-pill); padding: .5rem 1.1rem; cursor: pointer; transition: all var(--dur-fast) var(--ease-calm); }
+  .toggle:hover { border-color: var(--color-primary); color: var(--color-primary-hover); }
+
+  .eyebrow { font-family: var(--font-sans); font-size: var(--text-sm); font-weight: 500; text-transform: uppercase; letter-spacing: var(--tracking-widest); color: var(--color-primary); margin-bottom: var(--space-4); }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-8); align-items: center; background-image: var(--seigaiha); background-size: var(--seigaiha-size); }
+  .hero h1 { font-size: var(--text-6xl); }
+  .hero .lede { font-size: var(--text-lg); margin-top: var(--space-5); }
+  .hero figure { margin: 0; justify-self: center; }
+  .hero img { width: min(330px, 80vw); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); }
+
+  /* swatches */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-4); margin-top: var(--space-6); }
+  .swatch { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); box-shadow: var(--shadow-sm); }
+  .swatch .chip { height: 92px; }
+  .swatch .meta { padding: var(--space-3) var(--space-4); font-family: var(--font-sans); font-size: var(--text-sm); }
+  .swatch .meta .name { font-weight: 500; }
+  .swatch .meta .hex { color: var(--color-ink-subtle); letter-spacing: .02em; }
+
+  .ratio { display: flex; height: 26px; border-radius: var(--radius-pill); overflow: hidden; margin-top: var(--space-6); border: 1px solid var(--color-border); }
+  .ratio span { display: block; }
+
+  /* type scale */
+  .typerow { display: flex; align-items: baseline; gap: var(--space-5); padding-block: var(--space-3); border-bottom: 1px dashed var(--color-border); }
+  .typerow .label { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-subtle); width: 96px; flex: none; text-transform: uppercase; letter-spacing: var(--tracking-wide); }
+  .typerow .sample { font-family: var(--font-display); color: var(--color-ink); line-height: 1.1; }
+
+  /* components grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6); margin-top: var(--space-6); }
+  .panel { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+  .panel h3 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+
+  /* buttons */
+  .btn { font-family: var(--font-sans); font-size: var(--text-sm); font-weight: 500; letter-spacing: var(--tracking-wide); text-transform: uppercase; border-radius: var(--radius-pill); padding: .8rem 1.6rem; cursor: pointer; border: 1.5px solid transparent; transition: all var(--dur-base) var(--ease-calm); display: inline-block; text-decoration: none; }
+  .btn-primary { background: var(--color-primary); color: var(--color-on-primary); }
+  .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  .btn-ghost { background: transparent; color: var(--color-ink); border-color: var(--color-border-strong); }
+  .btn-ghost:hover { border-color: var(--color-primary); color: var(--color-primary-hover); }
+  .btn-link { background: transparent; border: 0; color: var(--color-primary-hover); padding-inline: 0; position: relative; }
+  .btnrow { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center; }
+
+  .field { display: block; }
+  .field label { font-family: var(--font-sans); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-ink-subtle); }
+  .field input { width: 100%; margin-top: var(--space-2); padding: .7rem .9rem; font: inherit; font-family: var(--font-sans); background: var(--color-bg); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); color: var(--color-ink); }
+  .field input:focus { outline: 2px solid var(--color-focus); outline-offset: 1px; border-color: var(--color-primary); }
+
+  /* feature card with organic image frame */
+  .dish { display: flex; gap: var(--space-5); align-items: center; }
+  .dish .thumb { width: 92px; height: 92px; flex: none; border-radius: var(--radius-organic); background: var(--gradient-brass); box-shadow: var(--shadow-md); }
+  .dish h3 { font-size: var(--text-2xl); }
+  .dish .price { font-family: var(--font-sans); color: var(--color-primary); font-weight: 500; }
+
+  /* motifs */
+  .kintsugi { height: 2px; background: var(--kintsugi-seam); margin-block: var(--space-6); border: 0; }
+  .brush { height: 14px; width: 220px; background: var(--color-ink); border-radius: 50%; transform: rotate(-2deg) scaleY(.5); opacity: .9; -webkit-mask: radial-gradient(circle at 8% 50%, #000 60%, transparent 62%), linear-gradient(90deg, #000, #000); }
+  .enso { display: block; }
+  .enso path.ring { fill: none; stroke: var(--color-primary); stroke-width: 9; stroke-linecap: round; }
+  .enso path.stroke { fill: none; stroke: var(--color-ink); stroke-width: 4; stroke-linecap: round; }
+  .seigaiha-demo { height: 120px; border-radius: var(--radius-lg); border: 1px solid var(--color-border); background-color: var(--color-surface-sunken); background-image: var(--seigaiha); background-size: var(--seigaiha-size); }
+
+  /* do / dont */
+  .dd { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-6); }
+  .dd .col { border-radius: var(--radius-lg); padding: var(--space-5); border: 1px solid var(--color-border); }
+  .dd .do { background: color-mix(in srgb, var(--ws-matcha-500) 12%, var(--color-surface)); }
+  .dd .dont { background: color-mix(in srgb, var(--ws-clay-500) 12%, var(--color-surface)); }
+  .dd h3 { font-family: var(--font-sans); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: var(--tracking-wider); }
+  .dd ul { margin: var(--space-3) 0 0; padding-left: 1.1rem; color: var(--color-ink-muted); font-size: var(--text-sm); line-height: var(--leading-relaxed); }
+
+  .voice blockquote { font-family: var(--font-display); font-style: italic; font-size: var(--text-2xl); color: var(--color-ink); margin: 0 0 var(--space-5); padding-left: var(--space-5); border-left: 2px solid var(--color-primary); }
+  footer { padding-block: var(--space-7); border-top: 1px solid var(--color-border); font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-subtle); }
+
+  @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero h1 { font-size: var(--text-5xl); } .dd { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap" style="border:0;padding-block:0;display:flex;align-items:center;justify-content:space-between;width:100%;">
+      <span class="mark">WABI&middot;SABI <b>Entebbe</b></span>
+      <button class="toggle" id="themeBtn" aria-label="Toggle theme">Sumi Night</button>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Brand Design System &middot; v1.0</div>
+        <h1>Beauty in the<br>imperfect.</h1>
+        <p class="lede">A living design language for Wabi-Sabi Entebbe — a Japanese-fusion
+          restaurant and sushi bar on Lake Victoria. Calm, natural, hand-crafted, unforced.</p>
+        <div class="btnrow" style="margin-top:var(--space-6)">
+          <a class="btn btn-primary" href="#">Reserve a moment</a>
+          <a class="btn btn-ghost" href="brand-guidelines.md">Read the guidelines</a>
+        </div>
+      </div>
+      <figure>
+        <img src="../assets/brand-hero.jpeg" alt="Wabi-Sabi Entebbe logo — a golden ensō crossed by sumi brushstrokes" />
+      </figure>
+    </section>
+
+    <!-- COLOUR -->
+    <section>
+      <div class="eyebrow">01 — Colour</div>
+      <h2 style="font-size:var(--text-3xl)">Warm neutrals, ink, one gold.</h2>
+      <p>Sampled from the logo. Use neutrals for ~85% of any surface, ink for text, and brass as a
+         single sparing accent. Restraint is the brand.</p>
+      <div class="swatches" id="swatches"></div>
+      <div class="ratio" id="ratio" aria-hidden="true"></div>
+      <p style="font-size:var(--text-sm);color:var(--color-ink-subtle);margin-top:var(--space-3)">
+        Suggested surface ratio — washi / ink / brass.</p>
+    </section>
+
+    <!-- TYPE -->
+    <section>
+      <div class="eyebrow">02 — Typography</div>
+      <h2 style="font-size:var(--text-3xl)">Cormorant Garamond &amp; Jost</h2>
+      <p>Elegant serif display over a calm humanist sans. Eyebrows are Jost, uppercase, widely
+         tracked — echoing the wordmark. <em>(Stand-in pairing pending the real brand fonts.)</em></p>
+      <div style="margin-top:var(--space-6)">
+        <div class="typerow"><span class="label">Display 6xl</span><span class="sample" style="font-size:var(--text-6xl)">Omakase</span></div>
+        <div class="typerow"><span class="label">Display 4xl</span><span class="sample" style="font-size:var(--text-4xl)">By the lake, at dusk</span></div>
+        <div class="typerow"><span class="label">Heading 2xl</span><span class="sample" style="font-size:var(--text-2xl)">Sushi &amp; small plates</span></div>
+        <div class="typerow"><span class="label">Body</span><span class="sample" style="font-family:var(--font-sans);font-size:var(--text-base);color:var(--color-ink-muted);line-height:var(--leading-normal)">Jost, set at 1.6 line-height for calm, readable paragraphs of menu copy and story.</span></div>
+        <div class="typerow"><span class="label">Eyebrow</span><span class="ws-eyebrow">A Japanese Fusion Restaurant</span></div>
+      </div>
+    </section>
+
+    <!-- COMPONENTS -->
+    <section>
+      <div class="eyebrow">03 — Components</div>
+      <h2 style="font-size:var(--text-3xl)">Quiet, tactile, calm.</h2>
+      <div class="grid">
+        <div class="panel">
+          <h3>Buttons</h3>
+          <div class="btnrow">
+            <a class="btn btn-primary" href="#">Reserve</a>
+            <a class="btn btn-ghost" href="#">View menu</a>
+            <button class="btn btn-link">Directions &rarr;</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Input</h3>
+          <label class="field"><span>Party size</span><input type="text" placeholder="Table for two" /></label>
+        </div>
+        <div class="panel">
+          <h3>Menu item</h3>
+          <div class="dish">
+            <div class="thumb" role="img" aria-label="dish image placeholder"></div>
+            <div>
+              <h3>Lake &amp; Lime Maki</h3>
+              <p style="margin:.25rem 0 .4rem;font-size:var(--text-sm)">Sample layout only — not a real dish.</p>
+              <span class="price">UGX —</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOTIFS -->
+    <section>
+      <div class="eyebrow">04 — Motifs &amp; texture</div>
+      <h2 style="font-size:var(--text-3xl)">The visual toolkit.</h2>
+      <div class="grid" style="align-items:center">
+        <div class="panel" style="text-align:center">
+          <h3>Ensō</h3>
+          <svg class="enso" width="150" height="150" viewBox="0 0 150 150" aria-label="ensō brush circle">
+            <path class="ring" d="M112 38 a52 52 0 1 0 14 44" transform="rotate(-12 75 75)"/>
+            <path class="stroke" d="M52 54 L104 100"/>
+            <path class="stroke" d="M100 50 L56 104"/>
+          </svg>
+        </div>
+        <div class="panel">
+          <h3>Kintsugi seam</h3>
+          <p style="font-size:var(--text-sm)">A thin gold line for dividers &amp; emphasis.</p>
+          <hr class="kintsugi" />
+          <h3 style="margin-top:var(--space-5)">Sumi brushstroke</h3>
+          <div class="brush" style="margin-top:var(--space-4)"></div>
+        </div>
+        <div class="panel">
+          <h3>Seigaiha ripples</h3>
+          <p style="font-size:var(--text-sm)">Barely-there background texture — a nod to the lake.</p>
+          <div class="seigaiha-demo" style="margin-top:var(--space-4)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICE + DO/DON'T -->
+    <section class="voice">
+      <div class="eyebrow">05 — Voice</div>
+      <h2 style="font-size:var(--text-3xl)">Few words. Lots of space.</h2>
+      <div style="margin-top:var(--space-6)">
+        <blockquote>A quiet table by the lake. Sushi at the bar. Time, slowed.</blockquote>
+        <blockquote>We're resting. Back to the bar soon.</blockquote>
+      </div>
+      <div class="dd">
+        <div class="col do">
+          <h3>Do</h3>
+          <ul>
+            <li>Lead with space — when unsure, add <em>ma</em>, not elements.</li>
+            <li>Keep gold for one accent per view.</li>
+            <li>Embrace asymmetry &amp; hand-made texture.</li>
+            <li>Write short, sensory, calm.</li>
+          </ul>
+        </div>
+        <div class="col dont">
+          <h3>Don't</h3>
+          <ul>
+            <li>No gloss, hard shadows, or neon.</li>
+            <li>No exclamation spam or emoji clutter.</li>
+            <li>No rigid symmetry or stock-photo sheen.</li>
+            <li>Don't recolour or distort the logo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="wrap" style="padding-inline:0">
+      Wabi-Sabi Entebbe — Design System v1.0 · 2026-06-15 · Colours sampled from the logo;
+      typefaces &amp; voice are informed inferences pending brand assets. Tokens:
+      <a href="tokens.css">tokens.css</a> · <a href="tokens.json">tokens.json</a> ·
+      <a href="tailwind.config.js">tailwind.config.js</a>.
+    </footer>
+  </main>
+
+<script>
+  // palette data
+  const palette = [
+    ["Washi 50","#FAF8F0"],["Washi 100","#F3EFE1"],["Washi 200","#E9E3D0"],
+    ["Stone 400","#C9BFA6"],["Stone 500","#A89E86"],["Stone 600","#7C7666"],
+    ["Brass 300","#D8B978"],["Brass 500","#B98A3C"],["Brass 700","#8A5E14"],
+    ["Sumi 700","#3A352B"],["Sumi 800","#2B2823"],["Sumi 900","#16150F"],
+    ["Clay 500","#B07A56"],["Matcha 500","#7C8366"]
+  ];
+  const sw = document.getElementById('swatches');
+  palette.forEach(([name,hex])=>{
+    const el = document.createElement('div'); el.className='swatch';
+    el.innerHTML = `<div class="chip" style="background:${hex}"></div><div class="meta"><div class="name">${name}</div><div class="hex">${hex}</div></div>`;
+    sw.appendChild(el);
+  });
+  // ratio bar
+  const ratio = document.getElementById('ratio');
+  [["#F3EFE1",84],["#16150F",10],["#B98A3C",6]].forEach(([c,w])=>{
+    const s=document.createElement('span'); s.style.background=c; s.style.flex=w; ratio.appendChild(s);
+  });
+  // theme toggle
+  const btn = document.getElementById('themeBtn');
+  btn.addEventListener('click',()=>{
+    const night = document.documentElement.getAttribute('data-theme')==='night';
+    document.documentElement.setAttribute('data-theme', night?'':'night');
+    btn.textContent = night ? 'Sumi Night' : 'Washi Day';
+  });
+</script>
+</body>
+</html>

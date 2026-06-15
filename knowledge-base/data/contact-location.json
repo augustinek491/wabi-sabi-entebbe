@@ -1,0 +1,31 @@
+{
+  "_meta": { "last_updated": "2026-06-15", "version": "1.0", "sources": ["linktr.ee/wabisabi_entebbe", "Google Maps short link", "hemingwaysentebbe.com"] },
+  "phone": { "value": "+256709768663", "display": "+256 709 768 663", "country": "Uganda", "confidence": "verified" },
+  "venue": {
+    "name": "Hemingways Hotel Entebbe",
+    "relationship": "Wabi-Sabi is the signature ground-floor restaurant",
+    "description": "Refined, purpose-built boutique hotel overlooking Lake Victoria, minutes from Entebbe International Airport.",
+    "interior_notes": ["warm African wood finishes", "exposed beams", "archways", "marble floors", "abundant natural light"],
+    "confidence": "verified"
+  },
+  "address": {
+    "street": "Mugwanya Rd",
+    "city": "Entebbe",
+    "country": "Uganda",
+    "full": "Hemingways Hotel, Mugwanya Rd, Entebbe, Uganda",
+    "confidence": "verified"
+  },
+  "coordinates": {
+    "lat": 0.0460137,
+    "lng": 32.4632966,
+    "note": "Maps listing pin ~0.0460083, 32.4658715; treat as approximate.",
+    "confidence": "verified"
+  },
+  "maps_listing": { "name": "Wabi-Sabi Entebbe", "url": "https://maps.app.goo.gl/LHSFDCamSVV1BpMj9" },
+  "hours": { "value": null, "confidence": "gap", "note": "Not exposed on the Google listing yet." },
+  "service_options": { "value": null, "confidence": "gap" },
+  "price_level": { "value": null, "confidence": "gap" },
+  "discrepancies": [
+    { "field": "phone", "wabisabi": "+256 709 768 663", "hotel_reservations_line": "+256 701 145 240", "note": "Different numbers; Wabi-Sabi's own Linktree number treated as authoritative for the restaurant." }
+  ]
+}

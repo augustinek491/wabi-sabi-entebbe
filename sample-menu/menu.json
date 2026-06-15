@@ -1,0 +1,1291 @@
+{
+  "_meta": {
+    "status": "SAMPLE",
+    "source": "Izumi Restaurant and Lounge menu (placeholder)",
+    "brand_shown": "Wabi-Sabi Entebbe",
+    "currency": "UGX",
+    "currency_note": "Prices are printed as bare numbers followed by a trailing dash (e.g. '75,000-') with no currency symbol. This format, combined with the magnitude of the numbers, strongly suggests Ugandan Shillings (UGX) — consistent with Izumi's Ugandan location and the Wabi-Sabi Entebbe (Uganda) project. Not printed explicitly on the source pages; treat as an inferred best guess.",
+    "disclaimer": "SAMPLE MENU — PLACEHOLDER ONLY. All dishes, descriptions, and prices in this file are transcribed from the Izumi Restaurant & Lounge menu and are used purely as placeholder content for Wabi-Sabi Entebbe website/mockup development. They do NOT represent Wabi-Sabi Entebbe's real menu, dishes, or pricing. Replace with actual Wabi-Sabi content before any public use.",
+    "last_updated": "2026-06-15",
+    "sample_data": true,
+    "source_pages": [
+      "source-images/page-001.jpg (cover)",
+      "source-images/page-002.jpg (Dessert)",
+      "source-images/page-003.jpg (Mains, Japanese Steaks, Rice & Noodles, Appetizers, Salads, Soups, Grills)",
+      "source-images/page-004.jpg (Dim Sum, Sushi, Sashimi, Nigiri, Poke Bowls, Japanese Salad)"
+    ],
+    "uncertain_items": [
+      {
+        "category": "Mains",
+        "item": "Grilled Snapper with Ponzu Sauce",
+        "field": "price",
+        "note": "Original obscured by the gold brush graphic on page-003.jpg; filled with an estimated placeholder price (85,000 UGX)."
+      },
+      {
+        "category": "Mains",
+        "item": "Spicy Fried Hamour Fish",
+        "field": "price",
+        "note": "Original obscured by the gold brush graphic on page-003.jpg; filled with an estimated placeholder price (80,000 UGX)."
+      },
+      {
+        "category": "Sashimi",
+        "item": "Sashimi Platter",
+        "field": "price",
+        "note": "Two tiers printed ('Small 70,000- / Medium 100,000- / Large 130,000-') — recorded as a single descriptive price string rather than a numeric value because of multiple tiers."
+      },
+      {
+        "category": "Nigiri",
+        "item": "Nigiri Platter",
+        "field": "price",
+        "note": "Three tiers printed ('Small 60,000- / Medium 79,000- / Large 100,000-') — recorded as a descriptive price string, same reasoning as Sashimi Platter."
+      },
+      {
+        "category": "Dessert",
+        "item": "Ice Cream",
+        "field": "price",
+        "note": "Two prices printed ('10,000- & 8,000g') — second figure's unit looks like it may be a misprint/OCR of weight or a typo; recorded both as printed."
+      },
+      {
+        "category": "Dessert",
+        "item": "Home Made Ice Cream",
+        "field": "price",
+        "note": "Two prices printed ('15,000- & 8,000g'), same formatting note as Ice Cream above; recorded both as printed."
+      }
+    ]
+  },
+  "categories": [
+    {
+      "name": "Mains",
+      "items": [
+        {
+          "name": "Dry Curry Prawns",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Lemon Prawns",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Singapore Chili Prawn Curry",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Steam Prawns with Garlic Sauce",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Thai Spicy Prawns",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tamarind Prawns",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Thai Red Curry",
+          "description": "Veg, Chicken or Pork",
+          "price": "40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with three prices: Veg 40,000- / Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Thai Green Curry",
+          "description": "Veg, Chicken or Pork",
+          "price": "40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with three prices: Veg 40,000- / Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Thai Panang Curry",
+          "description": "Veg, Chicken or Pork",
+          "price": "40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with three prices: Veg 40,000- / Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Thai Massaman Curry",
+          "description": "Veg, Chicken or Pork",
+          "price": "40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with three prices: Veg 40,000- / Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Spicy Minced Chicken/Pork",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Chicken/Pork with Black Mushrooms",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Cashewnut",
+          "description": "Veg, Chicken or Pork",
+          "price": "40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with three prices: Veg 40,000- / Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Shredded Chicken with Pickled Chili",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Ginger Chicken",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Pineapple Chicken/Pork",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX",
+          "notes": "Printed as 'Pineapple' on one line and 'Chicken/Pork — 45,000-' on the next; treated as one dish entry."
+        },
+        {
+          "name": "Crispy Thai Fried Chicken",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Japanese Curry",
+          "description": "Veg, Chicken or Pork",
+          "price": "40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with three prices: Veg 40,000- / Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Japanese Karaage",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Teriyaki",
+          "description": "Chicken or Pork",
+          "price": "45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Shogayaki",
+          "description": "Beef or Pork",
+          "price": "45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Beef 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Crispy Ginger Honey Beef",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Asian Style Mushroom",
+          "description": "Chicken or Pork",
+          "price": "45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Chicken 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Chilli Tofu with Eggplant",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Stir Fry Green Broccoli",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Thai Spicy Eggplant",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Three Flavor Fish",
+          "description": null,
+          "price": "85,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Steam Fish with Broccoli",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Steam Fish with Soy Sauce",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Sichuan Fried Fish",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Crispy Fried Fish with Tamarind Fish",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX",
+          "notes": "Printed item name appears to repeat 'Fish' twice ('...with Tamarind Fish'); transcribed exactly as printed."
+        },
+        {
+          "name": "Grilled Snapper with Ponzu Sauce",
+          "description": null,
+          "price": "85,000",
+          "currency": "UGX",
+          "notes": "Estimated placeholder — original price obscured by the gold brush graphic on page-003.jpg; estimate aligned with premium fish mains."
+        },
+        {
+          "name": "Spicy Fried Hamour Fish",
+          "description": null,
+          "price": "80,000",
+          "currency": "UGX",
+          "notes": "Estimated placeholder — original price obscured by the gold brush graphic on page-003.jpg; estimate aligned with premium fish mains."
+        },
+        {
+          "name": "Stir Fried Basil",
+          "description": "Veg, Chicken, Beef or Pork (Crispy Fish — 75,000-)",
+          "price": "40,000 / 45,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Printed as a multi-variant line: Veg 40,000- / Chicken 45,000- / Beef 45,000- / Pork 45,000-, with an additional 'Crispy Fish — 75,000-' variant noted separately."
+        },
+        {
+          "name": "Shredded Fish in Pickled Chilli",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Chili Garlic Veggies with Cashewnut",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Green Beans with Cashewnuts",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Stir Fry Lemon Eggplant",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Garlic Sprouts",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Japanese Steaks",
+      "items": [
+        {
+          "name": "Wasabi Pepper",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Red Chili, Sesame & Sweet Soy",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Lemongrass",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Rice & Noodles",
+      "items": [
+        {
+          "name": "Pad Thai Noodles",
+          "description": "Veg, Chicken or Shrimp",
+          "price": "35,000 / 40,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with prices: Veg 35,000- / Chicken 40,000- / Shrimp 45,000-."
+        },
+        {
+          "name": "Udon Noodles",
+          "description": "Veg, Chicken or Shrimp",
+          "price": "35,000 / 40,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with prices: Veg 35,000- / Chicken 40,000- / Shrimp 45,000-."
+        },
+        {
+          "name": "Soba Noodles",
+          "description": "Veg, Chicken or Shrimp",
+          "price": "35,000 / 40,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with prices: Veg 35,000- / Chicken 40,000- / Shrimp 45,000-."
+        },
+        {
+          "name": "Garlic Glass Noodles",
+          "description": "Veg, Chicken, Beef or Pork",
+          "price": "35,000 / 40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed four variants with prices: Veg 35,000- / Chicken 40,000- / Beef 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Fried Noodles",
+          "description": "Veg, Chicken, Beef or Pork",
+          "price": "35,000 / 40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed four variants with prices: Veg 35,000- / Chicken 40,000- / Beef 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Thai Sukiyaki Noodles",
+          "description": "Veg, Chicken, Beef or Pork",
+          "price": "35,000 / 40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed four variants with prices: Veg 35,000- / Chicken 40,000- / Beef 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Steamed Rice",
+          "description": null,
+          "price": "10,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Sticky Rice",
+          "description": null,
+          "price": "10,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fried Rice",
+          "description": "Veg, Chicken, Egg, Pork or Shrimp",
+          "price": "30,000 / 35,000 / 35,000 / 35,000 / 40,000",
+          "currency": "UGX",
+          "notes": "Single line listed five variants with prices: Veg 30,000- / Chicken 35,000- / Egg 35,000- / Pork 35,000- / Shrimp 40,000-."
+        },
+        {
+          "name": "Burnt Garlic Fried Rice",
+          "description": "Veg, Chicken or Pork",
+          "price": "30,000 / 35,000 / 35,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with prices: Veg 30,000- / Chicken 35,000- / Pork 35,000-."
+        },
+        {
+          "name": "Sesame Fried Rice",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Mushroom Fried Rice",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Pineapple Fried Rice",
+          "description": "Veg, Chicken, Beef or Pork",
+          "price": "35,000 / 40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed four variants with prices: Veg 35,000- / Chicken 40,000- / Beef 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Nasi Goreng",
+          "description": "Veg, Chicken, Beef or Pork",
+          "price": "35,000 / 40,000 / 45,000 / 45,000",
+          "currency": "UGX",
+          "notes": "Single line listed four variants with prices: Veg 35,000- / Chicken 40,000- / Beef 45,000- / Pork 45,000-."
+        },
+        {
+          "name": "Green Curry Rice",
+          "description": "Veg or Chicken",
+          "price": "30,000 / 35,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Veg 30,000- / Chicken 35,000-."
+        },
+        {
+          "name": "Guydon",
+          "description": "Donburi — Karaa-Don",
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Oyakodon",
+          "description": "Donburi",
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Ten Don",
+          "description": "Prawn",
+          "price": "60,000",
+          "currency": "UGX",
+          "notes": "Appears at the very bottom-edge of the page-003 column; may be partially cut off in print."
+        }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "items": [
+        {
+          "name": "Thai Spring Rolls",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fresh Spring Rolls",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX",
+          "notes": "Printed in the area overlapping the gold brush graphic; reasonably legible as 'Fresh Spring Rolls — 30,000-'."
+        },
+        {
+          "name": "Edamame",
+          "description": "Spicy 35,000- / Garlic 35,000- / Truffle 50,000-",
+          "price": "35,000 / 35,000 / 50,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with prices: Spicy 35,000- / Garlic 35,000- / Truffle 50,000-."
+        },
+        {
+          "name": "Cashewnut",
+          "description": "Tempura 35,000- / Chilli 35,000-",
+          "price": "35,000 / 35,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Tempura 35,000- / Chilli 35,000-."
+        },
+        {
+          "name": "Prawn Crackers",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Wasabi/Dynamite Prawns",
+          "description": null,
+          "price": "55,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Crispy Prawns Tempura",
+          "description": null,
+          "price": "70,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Furai Breadcrumb Prawns",
+          "description": null,
+          "price": "70,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Thai Fish",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fish Tempura",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Ginger Chicken Wings",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Chanui Chicken with Pancake",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Honey Sesame Spare Ribs",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Chilly Garlic Spare Ribs",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Wantons",
+          "description": "Veg 30,000- / Chicken 35,000-",
+          "price": "30,000 / 35,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Veg 30,000- / Chicken 35,000-."
+        },
+        {
+          "name": "Veg Tempura",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Rock Corn Tempura",
+          "description": null,
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Natu Miso Aubergine",
+          "description": null,
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Crispy Corn with Cashewnuts",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Salt & Pepper",
+          "description": "Brocoli 30,000- / Tofu 30,000-",
+          "price": "30,000 / 30,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Brocoli 30,000- / Tofu 30,000- (printed spelling 'Brocoli' retained as-is)."
+        },
+        {
+          "name": "Agadashi Tofu",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Okonomiyaki Pancake",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Mock Duck with Pancakes",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Crispy Hot Thai Chicken",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Honey Sesame Lotus Root",
+          "description": null,
+          "price": "45,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        {
+          "name": "Som Tum Papaya Salad",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX",
+          "notes": "Possible secondary number '20,000-' printed alongside; only the 30,000- figure is confidently legible, recorded as the price."
+        },
+        {
+          "name": "Laab",
+          "description": "Chicken 40,000- / Pork 40,000-",
+          "price": "40,000 / 40,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Chicken 40,000- / Pork 40,000-."
+        },
+        {
+          "name": "Wakame (Japanese Seaweed Salad)",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Nam Tok",
+          "description": "Beef 40,000- / Pork 40,000-",
+          "price": "40,000 / 40,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Beef 40,000- / Pork 40,000-."
+        },
+        {
+          "name": "Grilled Beef Salad",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Glass Noodle Salad",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Veg Salad",
+          "description": "Chicken or Beef",
+          "price": "28,000 / 35,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: 28,000- / Chicken or Beef 35,000-."
+        },
+        {
+          "name": "Thai Mango Salad",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Soups",
+      "items": [
+        {
+          "name": "Tom Yum",
+          "description": "Veg 30,000- / Shrimp 50,000-",
+          "price": "30,000 / 50,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Veg 30,000- / Shrimp 50,000-."
+        },
+        {
+          "name": "Tom Kha",
+          "description": "Veg 30,000- / Chicken 40,000-",
+          "price": "30,000 / 40,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Veg 30,000- / Chicken 40,000-."
+        },
+        {
+          "name": "Dumpling Soup",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Ramen Noodle Soup Miso",
+          "description": "Veg 40,000- / Chicken 50,000- / Seafood 65,000-",
+          "price": "40,000 / 50,000 / 65,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants with prices: Veg 40,000- / Chicken 50,000- / Seafood 65,000-."
+        },
+        {
+          "name": "Spicy Ramen Soup",
+          "description": "Veg 40,000- / Pork 50,000-",
+          "price": "40,000 / 50,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Veg 40,000- / Pork 50,000-."
+        },
+        {
+          "name": "Japanese Noodles Soup",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Soba Noodle Soup",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Sweet Corn Soup",
+          "description": "Chicken 25,000- / Crab 35,000-",
+          "price": "25,000 / 35,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Chicken 25,000- / Crab 35,000-."
+        },
+        {
+          "name": "Hot & Sour Soup",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Veg Soup",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Grills",
+      "items": [
+        {
+          "name": "Thai Roasted Chicken",
+          "description": null,
+          "price": "85,000",
+          "currency": "UGX",
+          "notes": "Item heading and price area overlap the gold brush graphic; price read as best-effort."
+        },
+        {
+          "name": "Chicken Yakitori",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Satay",
+          "description": "Chicken 30,000- / Pork 30,000- / Beef 30,000-",
+          "price": "30,000 / 30,000 / 30,000",
+          "currency": "UGX",
+          "notes": "Single line listed three variants, all 30,000-."
+        },
+        {
+          "name": "Thai Grilled",
+          "description": "Pork 45,000- / Prawns 65,000-",
+          "price": "45,000 / 65,000",
+          "currency": "UGX",
+          "notes": "Single line listed two variants with prices: Pork 45,000- / Prawns 65,000-."
+        },
+        {
+          "name": "Seafood Platter",
+          "description": "Tuna, Salmon, Prawn",
+          "price": "130,000",
+          "currency": "UGX",
+          "notes": "Bottom-right corner item; price partially overlaps the Izumi logo graphic, read as best-effort '130,000-'."
+        }
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        {
+          "name": "Classic Chocolate Fudge Cake",
+          "description": "Served with a scoop of vanilla ice cream",
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Dark Chocolate Mousse",
+          "description": "Not just any mousse, must try for chocolate lovers",
+          "price": "26,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fresh Fruits Platter",
+          "description": null,
+          "price": "32,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Coconut Milk Cake",
+          "description": "A must for coconut lovers",
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fresh Mango with Sticky Rice and Coconut Custard",
+          "description": "Popular Thai dessert",
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Ice Cream",
+          "description": "A scoop of your choice, from the following flavors: Vanilla / Chocolate / Strawberry",
+          "price": "10,000",
+          "currency": "UGX",
+          "notes": "A second figure printed alongside ('& 8,000g') is unclear — possibly a unit/typo error. Recorded the clearer '10,000-' as the price and flagged the second figure as illegible/uncertain."
+        },
+        {
+          "name": "Home Made Ice Cream",
+          "description": "A scoop of your choice, from the following flavors: Jasmine Tea / Sesame / Mango Lime / Coconut",
+          "price": "15,000",
+          "currency": "UGX",
+          "notes": "A second figure printed alongside ('& 8,000g') is unclear — possibly a unit/typo error. Recorded the clearer '15,000-' as the price and flagged the second figure as illegible/uncertain."
+        }
+      ]
+    },
+    {
+      "name": "Dim Sum — Vegetarian",
+      "items": [
+        {
+          "name": "Ginger Spinach and Mushroom",
+          "description": null,
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Steamed Garlic Greens",
+          "description": null,
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Edamame, Truffle and Tofu",
+          "description": null,
+          "price": "28,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Brocolli & Cashewnut",
+          "description": null,
+          "price": "28,000",
+          "currency": "UGX",
+          "notes": "Printed spelling 'Brocolli' retained as-is."
+        },
+        {
+          "name": "Vegetable Bao",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Veg Gyoza",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Panfried Ricepaper Dumpling",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Szechuan Dumpling",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Dim Sum — Non-Vegetarian",
+      "items": [
+        {
+          "name": "Prawn, Chive & Garlic",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Thai Lemongrass Shrimp",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Steamed Pork Dimsum",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Lemon Chicken",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Rice Pepper Chicken Dumpling",
+          "description": null,
+          "price": "38,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "BAO — Pork/Chicken",
+          "description": null,
+          "price": "42,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "GYOZA — Chicken / Pork",
+          "description": null,
+          "price": "38,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Szechuan Dumpling Chicken",
+          "description": null,
+          "price": "39,000",
+          "currency": "UGX",
+          "notes": "Price digits are tightly set; read as best-effort '39,000-' (could plausibly be '35,000-')."
+        }
+      ]
+    },
+    {
+      "name": "Sushi — Vegetarian (8pcs)",
+      "items": [
+        {
+          "name": "Vegetable Tempura",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Mushroom Teriyaki",
+          "description": null,
+          "price": "34,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Cucumber / Avocado / Maki",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Black Bean Brocolli",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX",
+          "notes": "Printed spelling 'Brocolli' retained as-is."
+        },
+        {
+          "name": "Crackled Spinach & Tofu",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Mango",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Jalapeno Pepper",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Avocado Wakame",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Tofu Roll",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fresh Green Maki",
+          "description": null,
+          "price": "36,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Thai Spicy Veg Sushi",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tamago Egg",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Crispy Brocolli Maki",
+          "description": null,
+          "price": "35,000",
+          "currency": "UGX",
+          "notes": "Printed spelling 'Brocolli' retained as-is."
+        }
+      ]
+    },
+    {
+      "name": "Sushi — Non-Veg (8pcs)",
+      "items": [
+        {
+          "name": "Tuna / Spicy",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Salmon Avocado",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "California",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Yellow Fin Tuna & Jalapeno",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Prawn Tempura Roll",
+          "description": null,
+          "price": "50,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tuna & Truffle",
+          "description": "Tuna / Salmon — 50,000-",
+          "price": "50,000",
+          "currency": "UGX",
+          "notes": "Sub-label 'Tuna / Salmon' printed under the heading with a single price 50,000-."
+        },
+        {
+          "name": "Maki",
+          "description": "Tuna / Salmon — 50,000-",
+          "price": "50,000",
+          "currency": "UGX",
+          "notes": "Sub-label 'Tuna / Salmon' printed under the heading with a single price 50,000-."
+        },
+        {
+          "name": "Mango & Prawn",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Dragon",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Classic Onigiri Roll",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Dynamite",
+          "description": "Tuna / Prawn — 50,000-",
+          "price": "50,000",
+          "currency": "UGX",
+          "notes": "Sub-label 'Tuna / Prawn' printed under the heading with a single price 50,000-."
+        },
+        {
+          "name": "Chicken Crispy Maki Sushi",
+          "description": null,
+          "price": "48,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Thai Spicy Chicken Sushi",
+          "description": null,
+          "price": "48,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Burnt Salmon Roll",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Burnt Tuna / Spicy",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Spicy Thai Prawns",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Burnt Snapper Maki",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Prawn Popper Maki",
+          "description": null,
+          "price": "60,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Sashimi",
+      "items": [
+        {
+          "name": "Tuna Tataki",
+          "description": null,
+          "price": "65,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Snapper Sashimi",
+          "description": null,
+          "price": "65,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fresh Salmon Sashimi",
+          "description": null,
+          "price": "85,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Fresh Salmon Thai Sashimi",
+          "description": null,
+          "price": "95,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Sashimi Platter",
+          "description": "Choice of size",
+          "price": "Small 70,000- / Medium 100,000- / Large 130,000-",
+          "currency": "UGX",
+          "notes": "Three-tier pricing printed on one line; recorded as a descriptive price string rather than a single numeric value."
+        }
+      ]
+    },
+    {
+      "name": "Nigiri (2 pcs)",
+      "items": [
+        {
+          "name": "Snapper",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tamago",
+          "description": null,
+          "price": "20,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Salmon",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tuna",
+          "description": null,
+          "price": "30,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Prawn",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Squid",
+          "description": null,
+          "price": "25,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Ikura Salmon Egg",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tobiko",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Nigiri Platter",
+          "description": "Choice of size",
+          "price": "Small 60,000- / Medium 79,000- / Large 100,000-",
+          "currency": "UGX",
+          "notes": "Three-tier pricing printed on one line; recorded as a descriptive price string rather than a single numeric value. 'Medium 79,000-' may possibly be '70,000-'; recorded as printed."
+        }
+      ]
+    },
+    {
+      "name": "Poke Bowls",
+      "items": [
+        {
+          "name": "Salmon",
+          "description": null,
+          "price": "90,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tuna",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Mixed Fish",
+          "description": null,
+          "price": "85,000",
+          "currency": "UGX"
+        }
+      ]
+    },
+    {
+      "name": "Japanese Salad",
+      "items": [
+        {
+          "name": "Wakame",
+          "description": null,
+          "price": "40,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Tuna",
+          "description": null,
+          "price": "55,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Salmon",
+          "description": null,
+          "price": "65,000",
+          "currency": "UGX"
+        },
+        {
+          "name": "Sea Food",
+          "description": null,
+          "price": "75,000",
+          "currency": "UGX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "last_updated": "2026-06-15",
+    "version": "1.0",
+    "status": "PLACEHOLDER — no real menu captured",
+    "warning": "No individual dishes or prices are known. The website is private and Instagram is login-walled. The arrays below are HIGH-LEVEL OFFERING CATEGORIES verified from the logo and the Hemingways Hotel website — NOT a menu. Do not treat as dish data.",
+    "sources": ["logo tagline", "hemingwaysentebbe.com"]
+  },
+  "known_offering_categories": [
+    { "category": "Sushi", "evidence": "Dedicated sushi bar; 'fresh sushi' (venue site)", "confidence": "verified" },
+    { "category": "Japanese / Asian fusion mains", "evidence": "Logo 'Japanese Fusion'; 'Asian fusion cuisine' (venue site)", "confidence": "verified" },
+    { "category": "International favourites & traditional dishes", "evidence": "Venue site", "confidence": "verified" },
+    { "category": "Wood-fired pizza", "evidence": "Poolside wood-fired pizza oven (venue site)", "confidence": "verified" },
+    { "category": "Handcrafted cocktails / bar", "evidence": "Venue site", "confidence": "verified" },
+    { "category": "Breakfast", "evidence": "Hotel breakfast served here, included in room rates (venue site)", "confidence": "verified" }
+  ],
+  "dishes": [],
+  "prices": null,
+  "currency_expected": "UGX",
+  "gaps": ["all individual dishes", "all prices", "set menus", "dietary/allergen info", "drinks list detail"]
+}

@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "last_updated": "2026-06-15",
+    "version": "1.0",
+    "sources": ["logo (assets/brand-hero.jpeg)", "linktr.ee/wabisabi_entebbe", "hemingwaysentebbe.com"],
+    "confidence_legend": { "verified": "from owned/official source", "inferred": "labelled inference", "gap": "unknown / not yet captured" }
+  },
+  "name": "Wabi-Sabi",
+  "display_name": "Wabi-Sabi Entebbe",
+  "stylized": "WABI-SABI",
+  "locality_tag": "Entebbe",
+  "tagline": "A Japanese Fusion Restaurant",
+  "cuisine": {
+    "brand_descriptor": "Japanese fusion",
+    "kitchen_reality": ["Asian fusion", "sushi bar", "international favourites", "traditional dishes", "handcrafted cocktails", "wood-fired pizza"],
+    "confidence": "verified",
+    "note": "Logo says 'Japanese fusion' (authoritative brand voice); venue site says 'Asian fusion'."
+  },
+  "concept": "Signature Japanese-fusion restaurant and sushi bar inside a boutique hotel on Lake Victoria.",
+  "tier": { "value": "upscale-casual / refined", "confidence": "inferred" },
+  "philosophy": {
+    "named_after": "wabi-sabi (侘寂) — the Japanese aesthetic of beauty in imperfection, impermanence and natural simplicity",
+    "principles": ["imperfection", "asymmetry", "natural materials", "understatement", "negative space (ma)", "the handmade"]
+  },
+  "established": { "online_since": "2026-06", "confidence": "verified", "note": "Linktree created June 2026; new business." },
+  "parent_venue": {
+    "name": "Hemingways Hotel Entebbe",
+    "relationship": "Wabi-Sabi is the hotel's signature ground-floor restaurant",
+    "website": "https://hemingwaysentebbe.com",
+    "confidence": "verified"
+  },
+  "audience": { "value": ["hotel guests", "Entebbe/Kampala diners seeking elevated dining", "travellers near the airport", "special-occasion / date-night"], "confidence": "inferred" },
+  "gaps": ["full menu & prices", "brand story copy", "opening hours", "confirmed typefaces", "social content & voice"]
+}

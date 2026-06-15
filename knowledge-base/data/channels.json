@@ -1,0 +1,51 @@
+{
+  "_meta": { "last_updated": "2026-06-15", "version": "1.0", "source": "linktr.ee/wabisabi_entebbe (page data)" },
+  "hub": { "type": "linktree", "url": "https://linktr.ee/wabisabi_entebbe", "status": "live", "created": "2026-06" },
+  "channels": [
+    {
+      "type": "website",
+      "label": "Website / Book a table",
+      "url": "https://wabisabi-ug.com",
+      "platform": "Squarespace",
+      "status": "private",
+      "http_status": 401,
+      "notes": "Not yet published; booking link also points here, so reservations are not live."
+    },
+    {
+      "type": "instagram",
+      "handle": "wabisabi_entebbe",
+      "url": "https://instagram.com/wabisabi_entebbe",
+      "status": "live",
+      "content_access": "login-walled",
+      "role": "Primary food/menu showcase ('See Menu - See Food on Instagram')."
+    },
+    {
+      "type": "tiktok",
+      "handle": "wabisabi.entebbe",
+      "url": "https://tiktok.com/@wabisabi.entebbe",
+      "status": "live",
+      "content_access": "bot-walled",
+      "role": "Short-form video."
+    },
+    {
+      "type": "phone",
+      "value": "+256709768663",
+      "display": "+256 709 768 663",
+      "url": "tel:+256709768663",
+      "status": "verified"
+    },
+    {
+      "type": "maps",
+      "label": "Find Us (Google Maps)",
+      "listing_name": "Wabi-Sabi Entebbe",
+      "url": "https://maps.app.goo.gl/LHSFDCamSVV1BpMj9",
+      "status": "listed"
+    }
+  ],
+  "handle_inconsistency": {
+    "instagram": "wabisabi_entebbe (underscore)",
+    "tiktok": "wabisabi.entebbe (dot)",
+    "recommendation": "Standardise handles across platforms for discoverability."
+  },
+  "not_present": ["facebook", "x_twitter", "youtube", "whatsapp_link"]
+}
