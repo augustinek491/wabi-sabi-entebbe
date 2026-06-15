@@ -1,4 +1,4 @@
-import { Card, Eyebrow, TagChip } from "@/components/ui";
+import { Card, Eyebrow } from "@/components/ui";
 import { EmptyState } from "./EmptyState";
 import { TAG_LABELS } from "@/lib/constants";
 import { formatAvgRating } from "@/lib/format";
@@ -21,9 +21,9 @@ export interface RecentCommentsProps {
  *
  * Each comment shows: dish name (or "Overall visit" if null), the numeric
  * rating it accompanied (always shown alongside text — PLAN §1.2's
- * "free-text sentiment vs. numeric rating" framing), its tag chips
- * (read-only, rendered via the shared `TagChip` in a disabled/inert style),
- * and a relative-ish date.
+ * "free-text sentiment vs. numeric rating" framing), its tags (rendered as
+ * static, non-interactive pills — no client-side handler crosses the RSC
+ * boundary), and a relative-ish date.
  */
 export function RecentComments({ title = "Recent comments", comments, emptyDescription }: RecentCommentsProps) {
   return (
@@ -54,13 +54,16 @@ export function RecentComments({ title = "Recent comments", comments, emptyDescr
               {/* Plain text node — never dangerouslySetInnerHTML (PLAN-ADDENDUM §A9). */}
               <p className="text-sm text-ink-muted whitespace-pre-wrap">{entry.comment}</p>
               {entry.tags.length > 0 ? (
-                <div className="flex flex-wrap gap-2" aria-label="Tags noted">
+                <ul className="flex flex-wrap gap-2" aria-label="Tags noted">
                   {entry.tags.map((tag) => (
-                    <TagChip key={tag} selected aria-disabled="true" tabIndex={-1} onToggle={() => {}}>
+                    <li
+                      key={tag}
+                      className="rounded-pill border border-border bg-surface-sunken px-3 py-1 font-sans text-xs uppercase tracking-wide text-ink-muted"
+                    >
                       {TAG_LABELS[tag]}
-                    </TagChip>
+                    </li>
                   ))}
-                </div>
+                </ul>
               ) : null}
             </li>
           ))}
