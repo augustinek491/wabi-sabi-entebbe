@@ -43,8 +43,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   return (
     <div className="min-h-screen bg-bg">
-      <header className="border-b border-border bg-surface">
-        <div className="mx-auto flex max-w-container items-center justify-between px-6 py-4 sm:px-10">
+      <header className="relative overflow-hidden border-b border-border bg-surface">
+        {/* Seigaiha wave pattern at 4% — brand texture without distraction */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: "url(/brand/brand-seigaiha.jpg)",
+            backgroundSize: "80px 80px",
+            backgroundRepeat: "repeat",
+            opacity: 0.04,
+          }}
+        />
+        <div className="relative mx-auto flex max-w-container items-center justify-between px-6 py-4 sm:px-10">
           <span className="font-display text-lg tracking-tight">{BRAND_NAME} — Admin</span>
           <nav
             aria-label="Admin sections"

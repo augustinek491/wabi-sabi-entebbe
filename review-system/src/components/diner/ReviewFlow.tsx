@@ -384,8 +384,33 @@ interface IntroScreenProps {
 
 function IntroScreen({ totalItems, headingRef, onBegin }: IntroScreenProps) {
   return (
-    <div className="flex min-h-screen flex-col px-6 py-12">
-      <div ref={headingRef} tabIndex={-1} className="mx-auto flex w-full max-w-[480px] flex-1 flex-col gap-6">
+    <div className="flex min-h-screen flex-col">
+      {/* Cinematic ambient hero — autoplay silent loop, poster is the hero still */}
+      <div className="relative h-56 w-full overflow-hidden sm:h-72">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/brand/brand-hero-still.png"
+          className="absolute inset-0 h-full w-full object-cover"
+          aria-hidden="true"
+        >
+          <source src="/brand/brand-ambient-loop.mp4" type="video/mp4" />
+        </video>
+        {/* Gradient fade to page background at the bottom edge */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(22,21,15,0.18) 0%, transparent 45%, var(--color-bg) 100%)",
+          }}
+        />
+      </div>
+
+      <div ref={headingRef} tabIndex={-1} className="mx-auto flex w-full max-w-[480px] flex-1 flex-col gap-6 px-6 pb-6 pt-4">
         <Eyebrow>Quick visit feedback</Eyebrow>
         <SectionHeading
           as="h1"
@@ -411,7 +436,6 @@ function IntroScreen({ totalItems, headingRef, onBegin }: IntroScreenProps) {
           variant="link"
           fullWidth
           onClick={() => {
-            // "Skip to overall" — jump straight to the quick path (≤45s, PLAN-ADDENDUM §C1).
             onBegin();
           }}
         >
@@ -611,7 +635,19 @@ interface ThanksScreenProps {
 
 function ThanksScreen({ skipped, onRetrySkipped, isRetrying, announceRef, headingRef }: ThanksScreenProps) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 px-6 py-12 text-center seigaiha-bg">
+    <div className="relative flex min-h-screen flex-col items-center justify-center gap-6 overflow-hidden px-6 py-12 text-center seigaiha-bg">
+      {/* Kintsugi background accent — very low opacity, adds warmth and depth */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: "url(/brand/brand-kintsugi.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.07,
+        }}
+      />
+
       <div
         ref={announceRef}
         role="status"
@@ -621,7 +657,7 @@ function ThanksScreen({ skipped, onRetrySkipped, isRetrying, announceRef, headin
         Thank you — your review has been submitted.
       </div>
 
-      <div ref={headingRef} tabIndex={-1} className="flex w-full max-w-[480px] flex-col items-center gap-6">
+      <div ref={headingRef} tabIndex={-1} className="relative flex w-full max-w-[480px] flex-col items-center gap-6">
         <SectionHeading
           as="h1"
           eyebrow="Thank you"

@@ -208,7 +208,11 @@
   }
 
   body {
-    background: var(--color-bg);
+    background-color: var(--color-bg);
+    background-image: url('/brand/brand-washi-grain.jpg');
+    background-size: 512px 512px;
+    background-repeat: repeat;
+    background-blend-mode: multiply;
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-weight: var(--weight-regular);
@@ -256,11 +260,22 @@
     margin: var(--space-6) 0;
   }
 
-  /* Faint seigaiha (ripple) wash — full-bleed ambient texture only,
-     never behind text-dense content. Opacity capped at 16% per brand. */
+  /* Faint seigaiha wash — pseudo-element so opacity only affects the
+     pattern, never the children (text, buttons, etc). */
   .seigaiha-bg {
-    background-image: var(--seigaiha);
-    background-size: var(--seigaiha-size);
-    opacity: 0.16;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .seigaiha-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/brand/brand-seigaiha.jpg');
+    background-size: 160px 160px;
+    background-repeat: repeat;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
   }
 }
